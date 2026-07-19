@@ -39,15 +39,50 @@
 
 // var is function scoped , blobal scoped
 
-var a = 10;
-function greet(){
-    // var a = 90; // if we comment this then it will read line number 42 
-    console.log(a)
+// var a = 10;
+// function greet(){
+//     // var a = 90; // if we comment this then it will read line number 42 
+//     console.log(a)
+// }
+
+// function fn(){
+//     var a = 100;
+//     greet()
+// }
+
+// fn()
+
+
+// ````` this is called shadowing ```````
+// let a = 90;
+
+// function greet(){
+//     let a = 700;
+//     console.log(a)
+// }
+
+// greet()
+// `````````````````
+
+
+
+
+// ````````scope chain`````````
+let collage = "LNCT"
+
+function department(){
+    let branch = "cse"
+
+    function classroom(){
+        let student = "Raju"
+        console.log(student)
+        console.log(branch)
+        console.log(collage)
+    }
+    
+    classroom()
 }
 
-function fn(){
-    var a = 100;
-    greet()
-}
+department()
 
-fn()
+// ``````````````
